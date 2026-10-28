@@ -34,11 +34,11 @@ export default function Navbar() {
     return (
         <header className="fixed inset-x-0 top-0 z-50 border-b border-line/60 bg-bg/80 backdrop-blur">
             <nav
-                className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5"
+                className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5"
                 aria-label="Main"
             >
                 <a href="#top" className="font-display text-xl font-bold">
-                    Mijba<span className="text-accent">.</span>
+                    Mijbahur<span className="text-accent">.</span>
                 </a>
                 <ul className="hidden gap-8 md:flex">
                     {links.map(([label, id]) => (

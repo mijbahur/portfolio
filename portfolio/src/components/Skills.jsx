@@ -4,7 +4,7 @@ import skills from "../data/skills";
 
 export default function Skills() {
     return (
-        <section id="skills" className="mx-auto max-w-6xl px-5 py-24">
+        <section id="skills" className="mx-auto max-w-7xl px-5 py-24">
             <SectionHeading
                 title="Technical skills"
                 text="The tools I use most, grouped by what they do."

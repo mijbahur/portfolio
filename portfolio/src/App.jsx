@@ -12,7 +12,6 @@ export default function App() {
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
     return (
-        // reducedMotion="user" turns off transform/layout animations for users who ask for less motion
         <MotionConfig reducedMotion="user">
             <motion.div
                 style={{ scaleX }}

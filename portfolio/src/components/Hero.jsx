@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { fade, stagger } from "./SectionHeading";
+import socialLinks from "../data/socialLinks";
+import photo from "../assets/images/mijbahur_rahman.png";
+
+import { MdOutlineFileDownload } from "react-icons/md";
 
 const roles = [
-    "Full-stack web developer",
-    "React & Next.js builder",
-    "CSE student at AIUB",
+    "React Developer",
+    "Next.js Builder",
+    "Full-Stack Web Developer",
 ];
 
 function Typing() {
@@ -30,7 +34,7 @@ function Typing() {
     }, [n, del, i, reduce]);
     return (
         <p
-            className="min-h-8 text-xl text-accent"
+            className="min-h-8 text-xl font-medium text-accent"
             aria-label={roles.join(", ")}
         >
             <span aria-hidden="true">
@@ -41,68 +45,41 @@ function Typing() {
     );
 }
 
-const shapes = [
-    { cls: "left-[6%] top-[22%] size-16 rounded-full border", y: 14, d: 7 },
-    { cls: "right-[8%] top-[18%] size-12 rotate-12 border", y: -12, d: 9 },
-    {
-        cls: "bottom-[12%] left-[44%] size-10 rounded-full border-2",
-        y: 10,
-        d: 8,
-    },
-];
-
-const spec = [
-    ["Name", "Hacin Mijbahur Rahman"],
-    ["Studying", "Computer Science & Engineering"],
-    ["University", "AIUB"],
-    ["Focus", "React, Next.js, Node.js"],
-    ["Status", "Open to internships"],
-];
-
 export default function Hero() {
     return (
         <section
             id="top"
             className="relative flex min-h-screen items-center overflow-hidden pt-16"
         >
-            {shapes.map((s, k) => (
-                <motion.span
-                    key={k}
-                    aria-hidden="true"
-                    className={`absolute border-line ${s.cls}`}
-                    animate={{ y: [0, s.y, 0] }}
-                    transition={{
-                        duration: s.d,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
-                />
-            ))}
-            <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.2fr_1fr]">
+            <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-2">
                 <motion.div
                     variants={stagger}
                     initial="hidden"
                     animate="show"
                     transition={{ delayChildren: 0.1 }}
                 >
-                    <motion.p variants={fade} className="mb-3 text-mute">
-                        Hi, I'm
+                    <motion.p
+                        variants={fade}
+                        className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-panel/60 px-3 py-1 text-sm text-mute"
+                    >
+                        <span className="size-2 rounded-full bg-emerald-400" />
+                        Open to internships and collaboration
                     </motion.p>
                     <motion.h1
                         variants={fade}
-                        className="text-6xl font-bold leading-none tracking-tight sm:text-8xl"
+                        className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl"
                     >
-                        Mijba
+                        Hi, I'm Hacin Mijbahur Rahman.
                     </motion.h1>
                     <motion.div variants={fade} className="mt-5">
                         <Typing />
                     </motion.div>
                     <motion.p
                         variants={fade}
-                        className="mt-5 max-w-lg text-mute"
+                        className="mt-5 max-w-md text-mute"
                     >
-                        I build web apps with React and Next.js, and I'm
-                        learning to design the backend and database behind them.
+                        I build useful, modern web applications with React and
+                        Next.js, and I'm studying to become a software engineer.
                     </motion.p>
                     <motion.div
                         variants={fade}
@@ -112,40 +89,77 @@ export default function Hero() {
                             href="#projects"
                             whileHover={{ y: -2 }}
                             whileTap={{ scale: 0.97 }}
-                            className="rounded-md bg-accent px-6 py-3 font-semibold text-bg"
+                            className="rounded-full bg-accent px-6 py-3 font-semibold text-bg"
                         >
-                            View projects
+                            Explore My Work
                         </motion.a>
                         <motion.a
                             href="#contact"
                             whileHover={{ y: -2 }}
                             whileTap={{ scale: 0.97 }}
-                            className="rounded-md border border-line px-6 py-3 font-semibold transition-colors hover:border-accent"
+                            className="rounded-full border border-line px-6 py-3 font-semibold transition-colors hover:border-accent"
                         >
-                            Contact me
+                            Let's Connect
+                        </motion.a>
+                        <motion.a
+                            href="#"
+                            whileHover={{ y: -2 }}
+                            whileTap={{ scale: 0.97 }}
+                            className="rounded-full bg-accent px-6 py-3 font-semibold text-bg flex items-center gap-3"
+                        >
+                            Resume
+                            <MdOutlineFileDownload />
                         </motion.a>
                     </motion.div>
+                    <motion.ul variants={fade} className="mt-8 flex gap-3">
+                        {socialLinks.map(({ name, href, icon: Icon }) => (
+                            <li key={name}>
+                                <motion.a
+                                    href={href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label={name}
+                                    whileHover={{ y: -3 }}
+                                    className="flex size-10 items-center justify-center rounded-full border border-line bg-panel/60 text-mute transition-colors hover:border-accent hover:text-accent"
+                                >
+                                    <Icon />
+                                </motion.a>
+                            </li>
+                        ))}
+                    </motion.ul>
                 </motion.div>
 
-                {/* Title block, like the corner of an engineering drawing */}
-                <motion.dl
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                    className="border border-line bg-panel/80 backdrop-blur"
+                {/* <motion.div
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className="mx-auto flex aspect-4/5 w-full max-w-sm items-center justify-center rounded-3xl border border-line bg-linear-to-br from-panel to-line/60 shadow-2xl shadow-black/40"
                 >
-                    {spec.map(([k, v]) => (
-                        <div
-                            key={k}
-                            className="grid grid-cols-[6.5rem_1fr] border-b border-line last:border-0"
-                        >
-                            <dt className="border-r border-line px-4 py-3 text-sm text-mute">
-                                {k}
-                            </dt>
-                            <dd className="px-4 py-3 font-medium">{v}</dd>
-                        </div>
-                    ))}
-                </motion.dl>
+                    <img
+                        src={photo}
+                        alt="Hacin Mijbahur Rahman"
+                        className="h-full w-full object-cover rounded-2xl shadow-lg"
+                        width="320"
+                        height="400"
+                    />
+                </motion.div> */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className="relative mx-auto w-full max-w-md"
+                >
+                    {/* purple glow behind the photo */}
+                    <div
+                        aria-hidden="true"
+                        className="absolute inset-0 -z-10 scale-110 rounded-full bg-[radial-gradient(circle,rgb(150_80_190/0.35),transparent_65%)] blur-2xl"
+                    />
+                    <img
+                        src={photo}
+                        alt="Hacin Mijbahur Rahman"
+                        className="photo-fade aspect-square w-full object-cover"
+                    />
+                </motion.div>
             </div>
         </section>
     );

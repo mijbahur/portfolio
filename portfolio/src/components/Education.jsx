@@ -7,19 +7,19 @@ const items = [
         title: "BSc in Computer Science & Engineering",
         place: "American International University-Bangladesh (AIUB)",
         years: "2022 - Present",
-        detail: "Web development, networking, operating systems, software engineering ethics.",
+        detail: "Web development, networking, operating systems.",
     },
     {
         title: "Higher Secondary Certificate",
-        place: "Your college name",
+        place: "Govt. Science College",
         years: "2020 - 2022",
-        detail: "Science group.",
+        detail: "Group: Science.",
     },
 ];
 
 export default function Education() {
     return (
-        <section id="education" className="mx-auto max-w-6xl px-5 py-24">
+        <section id="education" className="mx-auto max-w-7xl px-5 py-24">
             <SectionHeading title="Education" />
             <motion.ol
                 variants={stagger}

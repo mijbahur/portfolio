@@ -5,7 +5,7 @@ import socialLinks from "../data/socialLinks";
 export default function Footer() {
     return (
         <footer className="border-t border-line bg-bg/90">
-            <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
+            <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
                 <div>
                     <a href="#top" className="font-display text-2xl font-bold">
                         Mijba<span className="text-accent">.</span>

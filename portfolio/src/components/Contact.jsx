@@ -17,7 +17,7 @@ export default function Contact() {
         setSent(true);
     };
     return (
-        <section id="contact" className="mx-auto max-w-6xl px-5 py-24">
+        <section id="contact" className="mx-auto max-w-7xl px-5 py-24">
             <SectionHeading
                 title="Get in touch"
                 text="Have an internship, project or question? Send me a message."

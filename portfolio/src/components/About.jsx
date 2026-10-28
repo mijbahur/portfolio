@@ -9,7 +9,7 @@ const now = [
 
 export default function About() {
     return (
-        <section id="about" className="mx-auto max-w-6xl px-5 py-24">
+        <section id="about" className="mx-auto max-w-7xl px-5 py-24">
             <SectionHeading title="About me" />
             <motion.div
                 variants={stagger}
@@ -22,7 +22,7 @@ export default function About() {
                 >
                     <p>
                         I'm Hacin Mijbahur Rahman, but most people call me
-                        Mijba. I'm a Computer Science and Engineering student at
+                        Mijbahur. I'm a Computer Science and Engineering student at
                         AIUB who enjoys turning course projects into things that
                         actually work on the web.
                     </p>

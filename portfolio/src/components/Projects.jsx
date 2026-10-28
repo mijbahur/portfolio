@@ -43,7 +43,7 @@ const btn =
 
 export default function Projects() {
     return (
-        <section id="projects" className="mx-auto max-w-6xl px-5 py-24">
+        <section id="projects" className="mx-auto max-w-7xl px-5 py-24">
             <SectionHeading
                 title="Projects"
                 text="Coursework and personal builds. Each one links to its source code."

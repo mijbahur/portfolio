@@ -37,7 +37,7 @@ const skills = [
         items: [
             { name: "Node.js", icon: FaNodeJs },
             { name: "Express.js", icon: SiExpress },
-            { name: "REST APIs", icon: FaPlug },
+            // { name: "REST APIs", icon: FaPlug },
         ],
     },
     {
