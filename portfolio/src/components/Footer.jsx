@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
                 <div>
                     <a href="#top" className="font-display text-2xl font-bold">
-                        Mijba<span className="text-accent">.</span>
+                        Mijbahur<span className="text-accent">.</span>
                     </a>
                     <p className="mt-2 text-sm text-mute">
                         Hacin Mijbahur Rahman, web developer.
@@ -46,7 +46,7 @@ export default function Footer() {
                 </ul>
             </div>
             <p className="border-t border-line py-5 text-center text-sm text-mute">
-                © {new Date().getFullYear()} Mijba. Built with care, one
+                © {new Date().getFullYear()} Mijbahur. Built with care, one
                 component at a time.
             </p>
         </footer>
