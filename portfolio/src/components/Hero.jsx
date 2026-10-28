@@ -129,36 +129,57 @@ export default function Hero() {
                     </motion.ul>
                 </motion.div>
 
-                {/* <motion.div
-                    initial={{ opacity: 0, scale: 0.96 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
-                    className="mx-auto flex aspect-4/5 w-full max-w-sm items-center justify-center rounded-3xl border border-line bg-linear-to-br from-panel to-line/60 shadow-2xl shadow-black/40"
-                >
-                    <img
-                        src={photo}
-                        alt="Hacin Mijbahur Rahman"
-                        className="h-full w-full object-cover rounded-2xl shadow-lg"
-                        width="320"
-                        height="400"
-                    />
-                </motion.div> */}
+
                 <motion.div
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
-                    className="relative mx-auto w-full max-w-md"
+                    className="relative mx-auto flex aspect-square w-full max-w-md items-center justify-center"
                 >
-                    {/* purple glow behind the photo */}
+                    {/* soft glow around the circle */}
                     <div
                         aria-hidden="true"
-                        className="absolute inset-0 -z-10 scale-110 rounded-full bg-[radial-gradient(circle,rgb(150_80_190/0.35),transparent_65%)] blur-2xl"
+                        className="absolute inset-[8%] rounded-full bg-[radial-gradient(circle,rgb(255_200_87/0.15),rgb(60_120_200/0.1)_55%,transparent_72%)] blur-xl"
                     />
-                    <img
-                        src={photo}
-                        alt="Hacin Mijbahur Rahman"
-                        className="photo-fade aspect-square w-full object-cover"
+                    
+
+                    {/* rotating dashed ring with an orbiting dot */}
+                    <motion.div
+                        aria-hidden="true"
+                        animate={{ rotate: 360 }}
+                        transition={{
+                            duration: 40,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
+                        className="absolute inset-[3%] rounded-full border-2 border-dashed border-accent/40"
+                    >
+                        <span className="absolute -top-1.5 left-1/2 size-3 -translate-x-1/2 rounded-full bg-accent" />
+                    </motion.div>
+
+                    {/* rotating square, turning the other way */}
+                    <motion.div
+                        aria-hidden="true"
+                        animate={{ rotate: -360 }}
+                        transition={{
+                            duration: 60,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
+                        className="absolute inset-[8%] rounded-3xl border border-line"
                     />
+
+
+                    {/* solid circle: hides the square behind it and cuts off the photo at its edge */}
+                    <div className="relative aspect-square w-[80%] overflow-hidden rounded-full border border-line bg-linear-to-b from-panel to-bg">
+                        
+                        <img
+                            src={photo}
+                            alt="Hacin Mijbahur Rahman"
+                            className="absolute bottom-0 left-1/2 w-[108%] max-w-none -translate-x-1/2 brightness-90"
+                        />
+                         <div aria-hidden="true" className="absolute inset-0 bg-linear-to-t from-bg/20 via-transparent to-transparent" />
+                    </div>
                 </motion.div>
             </div>
         </section>
