@@ -13,35 +13,6 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
 }
-/* body {
-    background-color: var(--color-bg);
-    color: var(--color-ink);
-    font-family: var(--font-sans);
-    background-image:
-        linear-gradient(#14324f 1px, transparent 1px),
-        linear-gradient(90deg, #14324f 1px, transparent 1px);
-    background-size: 48px 48px;
-    background-attachment: fixed;
-} */
-
-/* body {
-  background-color: #071626;
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  background-image: linear-gradient(#0f2740 1px, transparent 1px), linear-gradient(90deg, #0f2740 1px, transparent 1px);
-  background-size: 48px 48px;
-  background-attachment: fixed;
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(600px circle at 10% 15%, rgb(255 200 87 / 0.10), transparent 60%),
-    radial-gradient(700px circle at 90% 90%, rgb(60 120 200 / 0.20), transparent 60%);
-} */
 
 body {
   background-color: #05111d;

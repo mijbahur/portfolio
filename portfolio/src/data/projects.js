@@ -1,4 +1,3 @@
-// Dummy data. Add real screenshots to src/assets/images and set `image` with an import,
 import bazardor from "../assets/images/bazardor.png"
 import fitLog from "../assets/images/fitLog.png"
 import devStack from "../assets/images/devStack.png"

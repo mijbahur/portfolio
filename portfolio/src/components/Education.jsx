@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import SectionHeading, { fade, stagger, view } from "./SectionHeading";
 
-// Dummy entries: replace the years and add your school/college details
 const items = [
     {
         title: "BSc in Computer Science & Engineering",
