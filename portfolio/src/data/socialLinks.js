@@ -5,8 +5,20 @@ import { MdOutlineMail } from "react-icons/md";
 export const email = "your.email@example.com";
 
 export default [
-  { name: "GitHub", href: "https://github.com/your-username", icon: FaGithub },
-  { name: "LinkedIn", href: "https://linkedin.com/in/your-username", icon: FaLinkedinIn },
-  { name: "Facebook", href: "https://facebook.com/your-username", icon: FaFacebookF },
-  { name: "Email", href: `mailto:${email}`, icon: MdOutlineMail },
+    {
+        name: "GitHub",
+        href: "https://github.com/your-username",
+        icon: FaGithub,
+    },
+    {
+        name: "LinkedIn",
+        href: "https://linkedin.com/in/your-username",
+        icon: FaLinkedinIn,
+    },
+    {
+        name: "Facebook",
+        href: "https://facebook.com/your-username",
+        icon: FaFacebookF,
+    },
+    { name: "Email", href: `mailto:${email}`, icon: MdOutlineMail },
 ];
